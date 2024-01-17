@@ -324,6 +324,7 @@ export interface IConfig {
     disableVirtualBackground?: boolean;
     disabledNotifications?: Array<string>;
     disabledSounds?: Array<Sounds>;
+    disabledToolbarButtons?: Array<ToolbarButton>;
     doNotFlipLocalVideo?: boolean;
     doNotStoreRoom?: boolean;
     dropbox?: {

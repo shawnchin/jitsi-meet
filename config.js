@@ -809,6 +809,10 @@ var config = {
     //    'whiteboard',
     // ],
 
+    // If specified, buttons declared disabledToolbarButtons will be excluded from the toolbar.
+    // This allows you to exclude buttons without having to override the full list of buttons in toolbarButtons.
+    // disabledToolbarButtons: [],
+
     // Holds values related to toolbar visibility control.
     // toolbarConfig: {
     //     // Moved from interfaceConfig.INITIAL_TOOLBAR_TIMEOUT

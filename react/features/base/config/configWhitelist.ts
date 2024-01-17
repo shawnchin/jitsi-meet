@@ -96,6 +96,7 @@ export default [
     'disableDeepLinking',
     'disabledNotifications',
     'disabledSounds',
+    'disabledToolbarButtons',
     'disableFilmstripAutohiding',
     'disableInitialGUM',
     'disableHPF',

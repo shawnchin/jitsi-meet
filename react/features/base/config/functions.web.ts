@@ -41,8 +41,9 @@ export function getReplaceParticipant(state: IReduxState): string | undefined {
  * @returns {Array<string>} - The list of enabled toolbar buttons.
  */
 export function getToolbarButtons(state: IReduxState): Array<string> {
-    const { toolbarButtons, customToolbarButtons } = state['features/base/config'];
+    const { toolbarButtons, customToolbarButtons, disabledToolbarButtons } = state['features/base/config'];
     const customButtons = customToolbarButtons?.map(({ id }) => id);
+    const excludedButtons = new Set(disabledToolbarButtons);
 
     const buttons = Array.isArray(toolbarButtons) ? toolbarButtons : TOOLBAR_BUTTONS;
 
@@ -50,7 +51,7 @@ export function getToolbarButtons(state: IReduxState): Array<string> {
         buttons.push(...customButtons as ToolbarButton[]);
     }
 
-    return buttons;
+    return buttons.filter(button => !excludedButtons.has(button));
 }
 
 /**
